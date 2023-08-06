@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First task of bharat intern</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="business-global-economy_24877-41082.avif" class="logo">
+                <ul> 
+                    <li> <a href="#header">Home</a></li>
+                    <li> <a href="#about">About Me</a></li>
+                    <li> <a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p style="text-align: center;">Web Developer</p>
+                <h1 style="text-align: center;">Hi, I am <a href="#contact">Mansi Tiwari</a>.</h1>
+            </div>
+        </div>
+    </div>
+    <!---------------about--------------------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="https://1drv.ms/i/s!AhWGPw_HtNdnkD6Ca04o8OcuEZlQ?e=HSgsr8">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle1">About Me</h1>
+                    <p class="subtitle2">Strong integration with problem-solving skills. Proficient in C++, C,
+                        HTML and CSS, Javascript. Passionate to implement new projects whether related
+                        to technical or non-technical fields. Ability to use creativity in
+                        business requirements.</p>
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                    <p class="tab-links" onclick="opentab('education')">Education</p>
+                    <p class="tab-links" onclick="opentab('achievements')">Achievements</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Blender 3D</span><br>3-Dimensional Modelling and Rendering</li>
+                        <li><span>HTML</span><br>Designing Web Application</li>
+                        <li><span>C++</span><br>Coding and problem-solving</li>
+                    </ul>
+                </div> 
+                <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>Class X:</span><br>ABC School</li>
+                        <li><span>Class XII:</span><br>ABC School</li>
+                        <li><span>B-tech:</span><br>ABC College</li>
+                    </ul>
+                </div> 
+                <div class="tab-contents" id="achievements">
+                    <ul>
+                        <li><span>Leetcode:</span><br>100+ problem solved</li>
+                        <li><span>Director:</span><br>Abhinaya group</li>
+                    </ul>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<!------------------------contact------------------>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class=""subtitle>Contact Me:</h1>
+                    <p>Email:    Contact.123@gmail.com</p>
+                    <p>Phone No:    0123456789</p>
+                </div>
+                <div class="contact-right">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name Here" required>
+                        <input type="email" name="Email" placeholder="Your Email Here" required>
+                        <textarea name="Message" rows="5" placeholder="Your Message Here"></textarea>
+                        <button type="submit" class="btn btn2" >Submit</button>
+                        <button type="reset" class="btn btn2">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+</body>
+</html>  
